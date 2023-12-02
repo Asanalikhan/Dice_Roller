@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.diceroller.ui.theme.DiceRollerTheme
 import androidx.compose.material3.Button
+import androidx.compose.ui.res.stringResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +37,12 @@ fun DiceRollerApp() {
 }
 @Composable
 fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
-    Column (
+    Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {}
+    ) {
+        Button(onClick = { /*TODO*/ }) {
+            Text(stringResource(R.string.roll))
+        }
+    }
 }
